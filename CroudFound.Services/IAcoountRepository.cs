@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CroudFound.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace CroudFound.Services
 {
-    internal interface IAcoountRepository
+    public interface IAcoountRepository
     {
+        IEnumerable<AccountData> GetAllAccountData();
+
     }
 }

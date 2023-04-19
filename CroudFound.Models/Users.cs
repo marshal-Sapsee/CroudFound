@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CroudFound.Models
 {
-    internal class Account
+    public enum Users
     {
+        Admin, User, SuperAdmin, Visitor
     }
 }

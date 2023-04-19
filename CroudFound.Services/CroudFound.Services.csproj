@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CroudFound.Models\CroudFound.Models.csproj" />
+  </ItemGroup>
+
 </Project>
