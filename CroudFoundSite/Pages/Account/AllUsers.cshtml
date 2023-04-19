@@ -1,9 +1,35 @@
 ﻿@page
 @model CroudFoundSite.Pages.Account.AllUsersModel
 @{
-    ViewData["Title"] = "AllAccounts";
+    ViewData["Title"] = "Все пользователи";
 }
+<br />
+<h1 class="text-center"> Все пользователи </h1>
 
-<h1> All Accounts </h1>
+<div class="row">
+    @foreach(var item in Model.AccountData)
+    {
+        //Формируем запрос к аватару по умолчанию
+        var photoPath = $"/images/noimage.png";
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card-deck">
+                <div class="card m-3 cardBoxShadow">
+                    <div class="card-header text-center cardHeaderStyle">
+                        <h3>
+                            @item.Name
+                        </h3>
+                    </div>
+                        <div class="text-center cardBodyStyle">
+                            <img class="card-img-top imageThumbnail" src="@photoPath" asp-append-version="true" />
+                        </div>
 
-<h3> @Model.AccountData.Count() </h3>
+                        <div class="card-footer text-center">
+                            <a class="btn btn-success buttonShadow m-1" href="#">Просмотр</a>
+                            <a class="btn btn-primary buttonShadow m-1" href="#">Редактировать</a>
+                            <a class="btn btn-danger buttonShadow m-1" href="#">Удалить</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

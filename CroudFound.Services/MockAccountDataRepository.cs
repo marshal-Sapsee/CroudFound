@@ -36,7 +36,7 @@ namespace CroudFound.Services
                     Id = 1,
                     Email = "Admin@gmail.com",
                     Password = "AdminHardPass",
-                    Name = "Pavel",
+                    Name = "Admin",
                     SurName = "Savanchuk",
                     Country = "Belarus",
                     Region = "Brest",
