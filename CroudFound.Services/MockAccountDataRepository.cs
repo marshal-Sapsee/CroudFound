@@ -17,19 +17,19 @@ namespace CroudFound.Services
             {
                 new AccountData() {
                     accountType = Users.SuperAdmin,
-                    Id = 0, 
-                    Email = "SuperAdmin@gmail.com", 
-                    Password = "SuperAdminPass", 
-                    Name = "Super", 
-                    SurName = "Admin", 
-                    Country = "Belarus", 
-                    Region = "Brest", 
-                    City = "Bereza", 
+                    Id = 0,
+                    Email = "SuperAdmin@gmail.com",
+                    Password = "SuperAdminPass",
+                    Name = "Super",
+                    SurName = "Admin",
+                    Country = "Belarus",
+                    Region = "Brest",
+                    City = "Bereza",
                     Address = "Office",
                     PostalCode = "None",
-                    Phone = "None",
+                    Birth = DateTime.Parse("12.02.1990"),
                     PhoneNumber = "None"
-                
+
                 },
                 new AccountData() {
                     accountType = Users.Admin,
@@ -43,7 +43,7 @@ namespace CroudFound.Services
                     City = "Bereza",
                     Address = "Office",
                     PostalCode = "None",
-                    Phone = "None",
+                    Birth = DateTime.Parse("12.04.1990"),
                     PhoneNumber = "None"
 
                 },
@@ -59,7 +59,7 @@ namespace CroudFound.Services
                     City = "Bereza",
                     Address = "Soviet 68, 19",
                     PostalCode = "225295",
-                    Phone = "99403",
+                    Birth = DateTime.Parse("12.05.1990"),
                     PhoneNumber = "+375255223246"
 
                 },
@@ -75,8 +75,8 @@ namespace CroudFound.Services
                     City = "Unathorized",
                     Address = "Unathorized",
                     PostalCode = "Unathorized",
-                    Phone = "Unathorized",
-                    PhoneNumber = "Unathorized"
+                    Birth = DateTime.Now,
+					PhoneNumber = "Unathorized"
                 }
             };
         }
