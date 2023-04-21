@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -80,6 +81,12 @@ namespace CroudFound.Services
                 }
             };
         }
+
+        public AccountData GetAccount(int id)
+        {
+            return _accountDataList.FirstOrDefault(x => x.Id == id);
+        }
+
         public IEnumerable<AccountData> GetAllAccountData()
         {
             return _accountDataList;
