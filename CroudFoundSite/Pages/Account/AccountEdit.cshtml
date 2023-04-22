@@ -1,0 +1,147 @@
+﻿@page "{id}:min(0,1)"
+@using CroudFound.Models;
+@model CroudFoundSite.Pages.Account.AccountEditModel
+@{
+    ViewData["Title"] = "Редактирование аккаунта";
+}
+
+<br />
+<!--Создаём форму редактирования-->
+<form method="post" class="mt-3">
+    <!--Создаём скрытое поле для параметра ID-->
+    <input type="hidden" asp-for="accountData.Id" />
+
+    <!--Добавляем поля редактирования-->
+    <div class="row justify-content-center m-3">
+        <div class="col col-lg-8">
+            <div class="card cardBoxShadow">
+
+                <div class="card-header cardHeaderStyle text-center">
+                    <!--Добавляем поле редактирования имени-->
+                    <div class="form-group row">
+                        <label asp-for="accountData.Name" class="col col-lg-4 col-form-label text-right">Изменить имя:</label>
+                        <div class="col col-lg-6">
+                            <input asp-for="accountData.Name" class="form-control" placeholder="@Model.accountData.Name" />
+                            <!--Добавляем сообщение валидации формы-->
+                            <span asp-validation-for="accountData.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                <div class="card-header cardHeaderStyle text-center">
+                <!--Добавляем поле редактирования фамилии-->
+                    <div class="form-group row">
+                        <label asp-for="accountData.SurName" class="col col-lg-4 col-form-label text-right">Изменить фамилию:</label>
+                        <div class="col col-lg-6">
+                            <input asp-for="accountData.SurName" class="form-control" placeholder="@Model.accountData.SurName" />
+                            <!--Добавляем сообщение валидации формы-->
+                            <span asp-validation-for="accountData.Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="card-body cardBodyStyle text-center">
+                    <div class="row">
+                        <div class="col col-lg-9">
+                            <h4 class="cardTextLeftFloating">Логин: @Model.accountData.Email</h4><hr />
+
+                            <!--Добавляем поле редактирования страны-->
+                            <div class="form-group row">
+                                <label asp-for="accountData.Country" class="col col-lg-4 col-form-label text-right">Изменить страну:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="accountData.Country" class="form-control mr-2" placeholder="@Model.accountData.Country" />
+                                    <!--Добавляем сообщение валидации формы-->
+                                    <span asp-validation-for="accountData.Country" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Добавляем поле редактирования региона-->
+                            <div class="form-group row">
+                                <label asp-for="accountData.Region" class="col col-lg-4 col-form-label text-right">Изменить регион:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="accountData.Region" class="form-control mr-2" placeholder="@Model.accountData.Region" />
+                                    <!--Добавляем сообщение валидации формы-->
+                                    <span asp-validation-for="accountData.Region" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Добавляем поле редактирования город-->
+                            <div class="form-group row">
+                                <label asp-for="accountData.City" class="col col-lg-4 col-form-label text-right">Изменить город:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="accountData.City" class="form-control mr-2" placeholder="@Model.accountData.City" />
+                                    <!--Добавляем сообщение валидации формы-->
+                                    <span asp-validation-for="accountData.City" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Добавляем поле редактирования адрес-->
+                            <div class="form-group row">
+                                <label asp-for="accountData.Address" class="col col-lg-4 col-form-label text-right">Изменить адрес:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="accountData.Address" class="form-control mr-2" placeholder="@Model.accountData.Address" />
+                                    <!--Добавляем сообщение валидации формы-->
+                                    <span asp-validation-for="accountData.Address" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Добавляем поле редактирования индекс-->
+                            <div class="form-group row">
+                                <label asp-for="accountData.PostalCode" class="col col-lg-4 col-form-label text-right">Изменить индекс:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="accountData.PostalCode" class="form-control mr-2" placeholder="@Model.accountData.PostalCode" />
+                                    <!--Добавляем сообщение валидации формы-->
+                                    <span asp-validation-for="accountData.PostalCode" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Добавляем поле редактирования дата рождения-->
+                            <div class="form-group row">
+                                <label asp-for="accountData.Birth" class="col col-lg-4 col-form-label text-right">Изменить дату рождения:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="accountData.Birth" class="form-control mr-2" placeholder="@Model.accountData.Birth" />
+                                    <!--Добавляем сообщение валидации формы-->
+                                    <span asp-validation-for="accountData.Birth" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Добавляем поле редактирования дата рождения-->
+                            <div class="form-group row">
+                                <label asp-for="accountData.PhoneNumber" class="col col-lg-4 col-form-label text-right">Изменить телефон:</label>
+                                <div class="col-12 col-lg-6">
+                                    <input asp-for="accountData.PhoneNumber" class="form-control mr-2" placeholder="@Model.accountData.PhoneNumber" />
+                                    <!--Добавляем сообщение валидации формы-->
+                                    <span asp-validation-for="accountData.PhoneNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                            <!--Добавляем поле редактирования типа аккаунта-->
+                            <div class="form-group row">
+                                <label asp-for="accountData.accountType" class="col col-lg-4 col-form-label text-right">Изменить тип аккаунта:</label>
+                                <div class="col-12 col-lg-6">
+                                    <!--Создаём выпадающий список с департаментами-->
+                                    <!--Необходимо подключить класс локально или глобально-->
+                                    <select asp-for="accountData.accountType" class="custom-select mr-2" asp-items="Html.GetEnumSelectList<Users>()">
+                                        <!--Добавляем начальный элемент выпадающего списка-->
+                                        <option value="">Please Select</option>
+                                    </select>
+                                    <span asp-validation-for="accountData.accountType" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <hr />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-footer text-center" style="background-color: rgba(0, 0, 0, 0.25);">
+                                <button type="submit" class="btn btn-success buttonShadow">Обновить</button>
+                                <a asp-page="Index" class="btn btn-danger buttonShadow">Отмена</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

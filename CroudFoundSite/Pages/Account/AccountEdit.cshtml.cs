@@ -5,22 +5,25 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CroudFoundSite.Pages.Account
 {
-    public class AccountDetailModel : PageModel
+    public class AccountEditModel : PageModel
     {
         private readonly IAcoountRepository _acoountRepository;
 
-        public AccountDetailModel(IAcoountRepository acoountRepository)
+        public AccountEditModel(IAcoountRepository acoountRepository)
         {
             _acoountRepository = acoountRepository;
         }
 
-        public AccountData Account { get; private set; }
+        public AccountData accountData { get; set; }
 
         public IActionResult OnGet(int id)
         {
-            Account = _acoountRepository.GetAccount(id);
+            accountData = _acoountRepository.GetAccount(id);
 
-            if (Account == null) return RedirectToPage("/NotFound");
+            if (accountData == null)
+            {
+                return RedirectToPage("/NotFound");
+            }
 
             return Page();
         }

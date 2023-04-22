@@ -1,0 +1,18 @@
+﻿@page
+@model CroudFoundSite.Pages.NotFoundModel
+@{
+    ViewData["Title"] = "Страница не найдена";
+}
+
+<div class="row">
+    <div class="col text-center">
+        <img src="/images/NotFound.png" alt="Страница не найдена" />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <h1 class="modal-header align-content-center">Ресурс который вы запрашиваете, не может быть найден.</h1>
+        <a asp-page="/Account/AllUsers" class="btn btn-primary"> Нажмите, чтобы вернуться на страницу всех пользователей </a>
+    </div>
+</div>
